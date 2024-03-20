@@ -7,13 +7,14 @@ Accomodation.belongsTo(User)
 
 
 const createAccomodation = async (req,res) => {
-    const {name,location,description} = req.body
-    if (!name || !location || !description) res.json({message:"All fields are required"})
+    const {name,location,description,image} = req.body
+    if (!name || !location || !description || !image) res.json({message:"All fields are required"})
     try {
         const newAccomodation = {
             name,
             location,
-            description
+            description,
+            image
         }
         await Accomodation.create(newAccomodation)
         res.json({message:"Accomodation created successfully"})

@@ -19,7 +19,7 @@ const registerUser = async (req,res) => {
         name,
         email,
         phone,
-        password:hashedPassword
+        password:hashedPassword,
     })
 
     if (user) res.status(201).json({id:user.id,email:user.email,name:user.name})

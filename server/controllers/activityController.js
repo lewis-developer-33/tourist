@@ -1,5 +1,6 @@
 const User = require("../db/models/user")
 const Activity = require("../db/models/activity")
+const Accomodation = require("../db/models/accomodation")
 
 
 User.hasMany(Activity)
