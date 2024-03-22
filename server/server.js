@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/auth',require("./routes/authRoute"))
 
-app.use('/api/users',require("./routes/userRoute"))
+app.use('/api/stk',require("./routes/stkRoute"))
 app.use('/api/activitys',require("./routes/activityRoute"))
 app.use('/api/accomodations',require("./routes/acccomodationRoute"))
 
